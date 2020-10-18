@@ -23,7 +23,7 @@ Or you can specify the encoding of your records:
 
     logger.log("MY LOG TYPE", "My message")  # Writes or/and prints a record
 
-Record will look like `[CURRENT_DATE_AND_TIME] [LOG TYPE] - MESSAGE`
+Record will look like `[CURRENT DATE AND TIME] [LOG TYPE] - MESSAGE\n`
 
 There is also shortcuts to some frequently used log types.
 

@@ -42,7 +42,9 @@ class Logger:
         """
         if self.file_path:
             with open(self.file_path, "a", encoding=self.encoding) as f:
-                f.write(f"[{datetime.datetime.now()}] [{log_type}] - {message}")
+                f.write(
+                    f"[{datetime.datetime.now()}] [{log_type}] - {message}\n"
+                )
         if self.print_to_console:
             print(message)
 
