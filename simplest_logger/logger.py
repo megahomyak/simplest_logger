@@ -40,13 +40,12 @@ class Logger:
             message:
                 a string to be written to the file or/and printed to the console
         """
+        record = f"[{datetime.datetime.now()}] [{log_type}] - {message}"
         if self.file_path:
             with open(self.file_path, "a", encoding=self.encoding) as f:
-                f.write(
-                    f"[{datetime.datetime.now()}] [{log_type}] - {message}\n"
-                )
+                f.write(f"{record}\n")
         if self.print_to_console:
-            print(message)
+            print(record)
 
     def debug(self, message: str) -> None:
         """
