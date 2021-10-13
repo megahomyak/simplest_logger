@@ -42,6 +42,6 @@ There is also shortcuts to some frequently used log types.
     logger.error(f"Error while serving the user {user.id}:\n{get_traceback(exc)}")
 
     # Record type is CRITICAL
-    logger.error(f"Database file {db_file_path} not found!")
+    logger.critical(f"Database file {db_file_path} not found!")
 
 You can inherit from the Logger class and add more shortcuts if you want.
